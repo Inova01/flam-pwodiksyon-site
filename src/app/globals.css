@@ -25,6 +25,7 @@ body {
   background: var(--cream);
   color: var(--charcoal);
   font-family: var(--font-body), Inter, sans-serif;
+  overflow-x: hidden;
 }
 
 body[data-theme="dark"] {
@@ -40,6 +41,10 @@ body[data-theme="dark"] {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+h1, h2, h3, p, a, button, input, textarea, select {
+  overflow-wrap: break-word;
 }
 
 .focus-ring:focus-visible {

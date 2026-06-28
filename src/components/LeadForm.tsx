@@ -18,7 +18,7 @@ export function LeadForm({ dict }: { dict: Dictionary }) {
   }
 
   return (
-    <form onSubmit={submit} className="grid gap-4 rounded-lg border border-charcoal/10 bg-white p-5 shadow-sm">
+    <form onSubmit={submit} className="grid gap-4 rounded-lg border border-charcoal/10 bg-white p-4 shadow-sm sm:p-5">
       <div className="grid gap-4 md:grid-cols-2">
         {fields.map((field) => (
           <label className="grid gap-2 text-sm font-bold" key={field}>
@@ -31,7 +31,7 @@ export function LeadForm({ dict }: { dict: Dictionary }) {
         {dict.form.message}
         <textarea className="focus-ring min-h-32 rounded-md border border-charcoal/15 px-4 py-3 font-normal" name="message" required />
       </label>
-      <button className="focus-ring inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-ember px-5 py-3 font-black text-white transition hover:bg-braise" type="submit">
+      <button className="focus-ring inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-ember px-5 py-3 font-black text-white transition hover:bg-braise sm:w-auto" type="submit">
         <Send size={18} />
         {dict.form.send}
       </button>

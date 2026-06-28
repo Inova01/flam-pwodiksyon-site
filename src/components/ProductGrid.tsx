@@ -4,8 +4,8 @@ import { Search, ShoppingBag, Sprout } from "lucide-react";
 import Image from "next/image";
 import { useMemo, useState } from "react";
 import { products } from "@/data/site";
-import type { Locale } from "@/lib/i18n";
 import type { Dictionary } from "@/i18n/dictionaries";
+import type { Locale } from "@/lib/i18n";
 
 const categories = ["all", "flours", "juices", "jams", "mamba", "spices", "snacks", "phase2"] as const;
 
@@ -22,15 +22,15 @@ export function ProductGrid({ locale, dict }: { locale: Locale; dict: Dictionary
   }, [category, locale, query]);
 
   return (
-    <section className="px-4 py-20 md:px-8">
+    <section className="px-4 py-14 md:px-8 md:py-20">
       <div className="mx-auto max-w-7xl">
         <div className="mb-8 grid gap-4 md:grid-cols-[1fr_auto] md:items-end">
           <div>
             <p className="mb-3 text-sm font-black uppercase tracking-[0.18em] text-ember">Gouligou</p>
-            <h1 className="font-display text-4xl font-black md:text-6xl">{dict.products.title}</h1>
-            <p className="mt-4 max-w-3xl text-lg text-ash">{dict.products.intro}</p>
+            <h1 className="font-display text-3xl font-black sm:text-4xl md:text-6xl">{dict.products.title}</h1>
+            <p className="mt-4 max-w-3xl text-base leading-7 text-ash sm:text-lg">{dict.products.intro}</p>
           </div>
-          <label className="relative block min-w-72">
+          <label className="relative block w-full md:min-w-72">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-ash" size={18} />
             <input
               className="focus-ring w-full rounded-full border border-charcoal/15 bg-white px-12 py-4"
@@ -40,10 +40,10 @@ export function ProductGrid({ locale, dict }: { locale: Locale; dict: Dictionary
             />
           </label>
         </div>
-        <div className="mb-8 flex flex-wrap gap-2">
+        <div className="mb-8 flex gap-2 overflow-x-auto pb-2 sm:flex-wrap sm:overflow-visible sm:pb-0">
           {categories.map((item) => (
             <button
-              className={`focus-ring rounded-full px-4 py-2 text-sm font-bold transition ${category === item ? "bg-charcoal text-cream" : "bg-white text-ash hover:text-ember"}`}
+              className={`focus-ring shrink-0 rounded-full px-4 py-2 text-sm font-bold transition ${category === item ? "bg-charcoal text-cream" : "bg-white text-ash hover:text-ember"}`}
               key={item}
               onClick={() => setCategory(item)}
             >
@@ -60,20 +60,20 @@ export function ProductGrid({ locale, dict }: { locale: Locale; dict: Dictionary
                   alt={product.name[locale]}
                   fill
                   className="object-cover transition duration-700 group-hover:scale-105"
-                  sizes="(min-width: 1024px) 33vw, 90vw"
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                   style={{ objectPosition: `${50 + (index % 3) * 14}% ${40 + (index % 2) * 12}%` }}
                 />
                 <span className="absolute left-4 top-4 rounded-full bg-cream px-3 py-1 text-xs font-black text-charcoal">
                   {product.status === "coming" ? dict.common.coming : "Gouligou"}
                 </span>
               </div>
-              <div className="p-5">
+              <div className="p-4 sm:p-5">
                 <div className="mb-3 flex items-center justify-between gap-3">
-                  <h2 className="font-display text-2xl font-black">{product.name[locale]}</h2>
-                  {product.line === "care" ? <Sprout className="text-agro" /> : <ShoppingBag className="text-ember" />}
+                  <h2 className="font-display text-xl font-black sm:text-2xl">{product.name[locale]}</h2>
+                  {product.line === "care" ? <Sprout className="shrink-0 text-agro" /> : <ShoppingBag className="shrink-0 text-ember" />}
                 </div>
-                <p className="text-sm text-ash">{product.description[locale]}</p>
-                <dl className="mt-5 grid grid-cols-2 gap-3 text-sm">
+                <p className="text-sm leading-6 text-ash">{product.description[locale]}</p>
+                <dl className="mt-5 grid gap-3 text-sm sm:grid-cols-2">
                   <div className="rounded-md bg-cream p-3">
                     <dt className="font-bold text-ash">Format</dt>
                     <dd className="font-black">{product.format}</dd>
