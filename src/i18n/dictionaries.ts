@@ -12,7 +12,8 @@ export const dictionaries = {
       products: "Produits",
       impact: "Filières & impact",
       wholesale: "Grossistes",
-      contact: "Contact"
+      contact: "Contact",
+      admin: "Admin"
     },
     common: {
       discover: "Découvrir Gouligou",
@@ -85,7 +86,8 @@ export const dictionaries = {
       products: "Pwodwi",
       impact: "Filyè & enpak",
       wholesale: "Gwo achtè",
-      contact: "Kontak"
+      contact: "Kontak",
+      admin: "Admin"
     },
     common: {
       discover: "Dekouvri Gouligou",
@@ -158,7 +160,8 @@ export const dictionaries = {
       products: "Products",
       impact: "Supply chains & impact",
       wholesale: "Wholesale",
-      contact: "Contact"
+      contact: "Contact",
+      admin: "Admin"
     },
     common: {
       discover: "Discover Gouligou",
