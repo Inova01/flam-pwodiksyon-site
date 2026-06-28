@@ -1,6 +1,7 @@
 import { Award, Factory, Handshake, MapPin, PackageCheck, Sprout } from "lucide-react";
 import Image from "next/image";
 import { CTA } from "@/components/CTA";
+import { HomeShowcase } from "@/components/HomeShowcase";
 import { LeadForm } from "@/components/LeadForm";
 import { Reveal } from "@/components/Motion";
 import { ProductGrid } from "@/components/ProductGrid";
@@ -52,6 +53,8 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: Dictionary })
           </Reveal>
         </div>
       </section>
+
+      <HomeShowcase locale={locale} />
 
       <ProductGrid locale={locale} dict={dict} />
 
