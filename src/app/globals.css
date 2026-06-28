@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ember: #e8541e;
+  --gold: #f2a516;
+  --braise: #9e2b0e;
+  --agro: #1f6f54;
+  --cream: #fbf6ee;
+  --charcoal: #1a1714;
+  --ash: #6b6258;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--charcoal);
+  font-family: var(--font-body), Inter, sans-serif;
+}
+
+body[data-theme="dark"] {
+  background: #12100e;
+  color: var(--cream);
+}
+
+::selection {
+  background: var(--ember);
+  color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.focus-ring:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+
+.noise {
+  position: relative;
+}
+
+.noise::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  background-image: radial-gradient(rgba(26, 23, 20, 0.18) 0.6px, transparent 0.6px);
+  background-size: 6px 6px;
+  mix-blend-mode: multiply;
+}
+
+.flame-gradient {
+  background: radial-gradient(circle at 20% 10%, rgba(242, 165, 22, 0.38), transparent 34%),
+    linear-gradient(135deg, rgba(232, 84, 30, 0.94), rgba(158, 43, 14, 0.92));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
