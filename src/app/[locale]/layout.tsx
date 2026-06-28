@@ -36,7 +36,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Flam Pwodiksyon",
-    url: "https://flampwodiksyon.ht",
+    url: "https://flampwodiksyon.live",
     brand: { "@type": "Brand", name: "Gouligou" },
     areaServed: ["HT", "US", "CA", "FR"]
   };

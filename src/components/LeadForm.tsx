@@ -13,7 +13,7 @@ export function LeadForm({ dict }: { dict: Dictionary }) {
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
-    await fetch("/api/lead", { method: "POST", body: JSON.stringify(Object.fromEntries(form)), headers: { "Content-Type": "application/json" } });
+    console.info("Lead ready to connect", Object.fromEntries(form));
     setSent(true);
   }
 

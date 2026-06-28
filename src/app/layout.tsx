@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-body", display: "swa
 const sora = Sora({ subsets: ["latin"], variable: "--font-display", display: "swap" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://flampwodiksyon.ht"),
+  metadataBase: new URL("https://flampwodiksyon.live"),
   title: "Flam Pwodiksyon",
   description: "Site vitrine officiel de Flam Pwodiksyon.",
   icons: { icon: "/favicon.ico" }
