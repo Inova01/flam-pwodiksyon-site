@@ -3,7 +3,7 @@ import { locales } from "@/lib/i18n";
 
 export const dynamic = "force-static";
 
-const routes = ["", "/histoire", "/produits", "/impact", "/grossistes", "/contact", "/admin"];
+const routes = ["", "/histoire", "/produits", "/impact", "/grossistes", "/contact"];
 const lastModified = new Date("2026-06-28");
 
 export default function sitemap(): MetadataRoute.Sitemap {

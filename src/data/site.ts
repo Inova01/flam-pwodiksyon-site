@@ -17,8 +17,7 @@ export const navItems = [
   { href: "produits", key: "products" },
   { href: "impact", key: "impact" },
   { href: "grossistes", key: "wholesale" },
-  { href: "contact", key: "contact" },
-  { href: "admin", key: "admin" }
+  { href: "contact", key: "contact" }
 ] as const;
 
 export const products: Product[] = [
